@@ -1,0 +1,186 @@
+@import '_vars.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    @include flexCenter();
+    @include bodyFont();
+    flex-direction: column;
+    background-color: $PrimaryColor1;
+    background-image: url(../../img/bg-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 4rem;
+    
+}
+
+main {
+    display: flex;
+    height: 70vh;
+    width: 100vw;
+}
+
+
+
+
+main section {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.5rem;
+    
+    
+
+}
+
+section h1 {
+    width: 90%;
+    margin-bottom: 1rem;
+    @include headingFont(600);
+    font-size: 2rem;
+}
+
+section p {
+    width: 33vw;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    @include bodyFont();
+}
+
+footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 4rem;
+}
+nav {
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+nav svg {
+    width: 3rem;
+    fill: white;
+    transition: all .25s;
+}
+
+nav svg:hover{
+    fill: $PrimaryColor2;
+}
+
+
+
+.mockup-img {
+    width: 80vw;
+}
+
+.image {
+    width: 60vw;
+    @include flexCenter();
+}
+
+.logo {
+    width: 12rem;
+}
+
+.mockup-img {
+    width: 85%;
+}
+
+
+.btn-register {
+    padding: .7rem;
+    width: 150px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.329);
+    font-size: .9rem;
+    color: $PrimaryColor1;
+    @include headingFont(400);
+    cursor: pointer;
+    transition: all .25s;
+    
+}
+
+.btn-register:hover{
+    background-color: $PrimaryColor2;
+    color: white;
+}
+
+
+@media (max-width: 500px) {
+    body {
+        background-image: url(../../img/bg-mobile.svg);
+    }
+
+    header {
+        padding-left: .9rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+    }
+    main {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin: 0;
+    }
+
+    .logo {
+        transform: scale(.7);
+    }
+
+    section {
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    
+    }
+
+    section h1 {
+        text-align: center;
+        width: 100vw;
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+
+
+    section p {
+        width: 90vw;
+        padding: 1rem;
+    }
+
+    footer {
+        height: 30vh;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+
+    }
+}
+
